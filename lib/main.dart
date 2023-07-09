@@ -57,10 +57,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<dynamic> items = [];
-  bool avatarError = false;
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('bootcamp.json');
+    final String response = await rootBundle.loadString('data/bootcamp.json');
     final data = await json.decode(response)["data"];
     var chats = [];
     for (final item in data) {
