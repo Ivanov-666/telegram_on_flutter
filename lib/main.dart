@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<dynamic> items = [];
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('data/bootcamp.json');
+    final String response = await rootBundle.loadString('assets/data/bootcamp.json');
     final data = await json.decode(response)["data"];
     var chats = [];
     for (final item in data) {
